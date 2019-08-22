@@ -569,10 +569,10 @@ class VoyantReader
 				#puts "\tmyText: #{myText}"
 				
 				# escape all commas
-				myAuthor.gsub!(',', '\,')
-				myDate.gsub!(',', '\,')
-				myTitle.gsub!(',', '\,')
-				myText.gsub!(',', '\,')
+				myAuthor.gsub!(',', ' \,')
+				myDate.gsub!(',', ' \,')
+				myTitle.gsub!(',', ' \,')
+				myText.gsub!(',', ' \,')
 				
 				# write to CSV
 				CSV.open("/Users/marisajohnson/Desktop/RubyProjects/myCSV.csv", "a") do |csv|
@@ -598,19 +598,6 @@ class VoyantReader
 			end # if statement to only work w/ strings that contain 'https'
 		end # end of parse text function
 		
-		#puts "I counted #{myCount} urls"
-		
-		# write to file
-		# File.open("out.txt", 'w') {|file| file.write("WRITE YOUR STUFF HERE")}
-	
-		# MUST DO TAB DELIMITED CSV
-		# write cleaned text to a CSV file
-		#CSV.open("cleanLinks.csv", "w") do |csv|
-			#csv << [ article text ]
-		#end
-			
-		# increment iterator
-		#iterator += 1
 		
 	end
 end
